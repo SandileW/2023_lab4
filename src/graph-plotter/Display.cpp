@@ -2,7 +2,7 @@
 #include <cassert>
 
 // DO NOT MODIFY THE DISPLAY CLASS!
-
+//Presentation layer
 Display::Display(int display_width, int display_height):
 	display_width_(display_width),
 	display_height_(display_height),

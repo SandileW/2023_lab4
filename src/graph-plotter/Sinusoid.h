@@ -1,6 +1,6 @@
 #ifndef SINUSOID_H
 #define SINUSOID_H
-
+//Logic layer
 class Sinusoid
 {
 public:

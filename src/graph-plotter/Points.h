@@ -1,6 +1,6 @@
 #ifndef POINTS_H
 #define POINTS_H
-
+//Logic layer
 struct Point
 {
 	float x;

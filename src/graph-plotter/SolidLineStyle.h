@@ -2,7 +2,7 @@
 #define SOLIDLINESTYLE_H
 
 #include "LineStyle.h"
-
+//Presentation layer
 class SolidLineStyle: public LineStyle
 {
 public:

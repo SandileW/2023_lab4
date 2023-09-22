@@ -3,7 +3,7 @@
 
 #include "DataPoints.h"
 #include "Sinusoid.h"
-
+//Logic layer
 class Sampler
 {
 public:
