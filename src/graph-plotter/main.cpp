@@ -5,10 +5,11 @@
 #include "SolidLineStyle.h"
 #include "Points.h"
 #include <memory>
-
-using std::shared_ptr;
+#include "DashedLineStyle.h"
+#include "DottedLineStyle.h"
 using std::make_shared;
-//it because of the sampling points are too distant apart, they must be increased
+using std::shared_ptr;
+// it because of the sampling points are too distant apart, they must be increased
 const float PI = 3.14159265359;
 
 int main()
@@ -24,16 +25,21 @@ int main()
 	auto frequency = 1.0f;
 	auto phase = 0.0f;
 	auto sine_function = Sinusoid{amplitude, frequency, phase};
-	auto cosine_function = Sinusoid{amplitude, frequency, phase + PI/2};
+	auto cosine_function = Sinusoid{amplitude, frequency, phase + PI / 2};
 
 	// generate range and plot graphs
-	auto range = Range{0, 6*PI};
+	auto range = Range{0, 6 * PI};
 	auto solid_red = SolidLineStyle{Colour::Red, display};
 	graph.plot(generateDataPoints(sine_function, range), solid_red);
 
 	auto solid_blue = SolidLineStyle{Colour::Blue, display};
 	graph.plot(generateDataPoints(cosine_function, range), solid_blue);
 
+	auto dashed_green = DashedLineStyle{Colour::Green, display};
+	graph.plot(generateDataPoints(sine_function, range), dashed_green);
+
+	auto dotted_green = DottedLineStyle{Colour::Green, display};
+	graph.plot(generateDataPoints(sine_function, range), dotted_green);
+
 	return 0;
 }
-
