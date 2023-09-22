@@ -8,7 +8,7 @@
 
 using std::shared_ptr;
 using std::make_shared;
-
+//it because of the sampling points are too distant apart, they must be increased
 const float PI = 3.14159265359;
 
 int main()
